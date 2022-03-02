@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainShopVC" customModule="Project_v6" customModuleProvider="target">
+            <connections>
+                <outlet property="logoHeightConstraint" destination="Wje-6e-3nb" id="eIh-wZ-UdI"/>
+                <outlet property="pageControlForSlider" destination="uad-dd-j8q" id="yFh-68-JbV"/>
+                <outlet property="preloader" destination="cEr-Ch-GFC" id="Kmr-u0-wsY"/>
+                <outlet property="productsTable" destination="Zqh-7M-ycD" id="DYA-Fc-aYQ"/>
+                <outlet property="searchBar" destination="ufB-Ed-xkr" id="xNG-26-bBv"/>
+                <outlet property="searchResults" destination="cLG-HK-8Cl" id="TaZ-7M-6x4"/>
+                <outlet property="sliderCollection" destination="jng-89-Y1y" id="DNf-rV-PYg"/>
+                <outlet property="sliderHeightConstraint" destination="Nz4-dB-e9S" id="g6i-bY-dkq"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shop-logo" translatesAutoresizingMaskIntoConstraints="NO" id="oa3-oS-F1u">
+                    <rect key="frame" x="157" y="44" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="Wje-6e-3nb"/>
+                        <constraint firstAttribute="width" secondItem="oa3-oS-F1u" secondAttribute="height" multiplier="1:1" id="qOz-ff-3SV"/>
+                    </constraints>
+                </imageView>
+                <searchBar contentMode="scaleAspectFit" barStyle="black" searchBarStyle="minimal" placeholder="Search products" translatesAutoresizingMaskIntoConstraints="NO" id="ufB-Ed-xkr">
+                    <rect key="frame" x="25" y="154" width="364" height="51"/>
+                    <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <scopeButtonTitles>
+                        <string>Title</string>
+                        <string>Title</string>
+                    </scopeButtonTitles>
+                </searchBar>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="scrollableAxes" bouncesZoom="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="jng-89-Y1y">
+                    <rect key="frame" x="30" y="210" width="354" height="100"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="Nz4-dB-e9S"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="5" id="CPn-nj-8C3">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <cells/>
+                </collectionView>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="uad-dd-j8q">
+                    <rect key="frame" x="149" y="280" width="116" height="26"/>
+                    <color key="pageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="currentPageIndicatorTintColor" red="0.32549019610000002" green="0.69411764710000001" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                </pageControl>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Zqh-7M-ycD">
+                    <rect key="frame" x="10" y="315" width="404" height="581"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cEr-Ch-GFC" customClass="AnimationView" customModule="Lottie">
+                    <rect key="frame" x="0.0" y="333" width="414" height="563"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="product-preloader-animation"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cLG-HK-8Cl">
+                    <rect key="frame" x="25" y="205" width="364" height="120"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="120" id="2cN-Ah-gd0"/>
+                    </constraints>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Zqh-7M-ycD" firstAttribute="top" secondItem="jng-89-Y1y" secondAttribute="bottom" constant="5" id="0HB-vg-fsA"/>
+                <constraint firstItem="oa3-oS-F1u" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="0oj-Br-R50"/>
+                <constraint firstItem="cLG-HK-8Cl" firstAttribute="trailing" secondItem="ufB-Ed-xkr" secondAttribute="trailing" id="0yu-ja-UAv"/>
+                <constraint firstItem="cEr-Ch-GFC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="2Dx-kU-f8J"/>
+                <constraint firstItem="uad-dd-j8q" firstAttribute="top" secondItem="jng-89-Y1y" secondAttribute="bottom" constant="-30" id="5EJ-Uq-UPQ"/>
+                <constraint firstItem="ufB-Ed-xkr" firstAttribute="top" secondItem="oa3-oS-F1u" secondAttribute="bottom" constant="10" id="D06-n6-q9f"/>
+                <constraint firstItem="ufB-Ed-xkr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="FMW-i3-37A"/>
+                <constraint firstItem="cLG-HK-8Cl" firstAttribute="top" secondItem="ufB-Ed-xkr" secondAttribute="bottom" id="Fcz-nZ-B4r"/>
+                <constraint firstAttribute="bottom" secondItem="Zqh-7M-ycD" secondAttribute="bottom" id="MRx-jP-bPG"/>
+                <constraint firstItem="cEr-Ch-GFC" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="289" id="Ohx-Qs-kgF"/>
+                <constraint firstItem="jng-89-Y1y" firstAttribute="top" secondItem="ufB-Ed-xkr" secondAttribute="bottom" constant="5" id="Q1R-1O-ruf"/>
+                <constraint firstItem="Zqh-7M-ycD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="Uwy-Pf-ZZ8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jng-89-Y1y" secondAttribute="trailing" constant="30" id="W2I-Qh-Xkr"/>
+                <constraint firstItem="cLG-HK-8Cl" firstAttribute="leading" secondItem="ufB-Ed-xkr" secondAttribute="leading" id="YF5-wE-lqJ"/>
+                <constraint firstItem="jng-89-Y1y" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="avF-Bx-NFk"/>
+                <constraint firstItem="cEr-Ch-GFC" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="dwA-YS-IU8"/>
+                <constraint firstItem="oa3-oS-F1u" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="eBv-bG-sxi"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ufB-Ed-xkr" secondAttribute="trailing" constant="25" id="hL1-F5-l37"/>
+                <constraint firstItem="uad-dd-j8q" firstAttribute="centerX" secondItem="jng-89-Y1y" secondAttribute="centerX" id="jmU-t7-J5d"/>
+                <constraint firstAttribute="bottom" secondItem="cEr-Ch-GFC" secondAttribute="bottom" id="ovl-bi-kAA"/>
+                <constraint firstItem="Zqh-7M-ycD" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="zvO-Qq-9eb"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="85.714285714285708"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="cEr-Ch-GFC"/>
+    </designables>
+    <resources>
+        <image name="shop-logo" width="156.5" height="209.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

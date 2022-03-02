@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Gilroy-Medium.ttf">
+            <string>Gilroy-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CartVC" customModule="Project_v6" customModuleProvider="target">
+            <connections>
+                <outlet property="preloader" destination="e2k-af-lK4" id="yOn-Sq-gUt"/>
+                <outlet property="tableView" destination="7pL-bW-I8w" id="diT-Xq-qcU"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="180" estimatedRowHeight="180" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7pL-bW-I8w">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e2k-af-lK4" customClass="AnimationView" customModule="Lottie">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your shoping cart is Empty" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JtG-K4-8Uq">
+                            <rect key="frame" x="10" y="50" width="394" height="20"/>
+                            <fontDescription key="fontDescription" name="Gilroy-Medium" family="Gilroy" pointSize="20"/>
+                            <color key="textColor" red="0.0" green="0.13772736138102559" blue="0.56581439393939392" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="JtG-K4-8Uq" secondAttribute="trailing" constant="10" id="4jc-SZ-y3h"/>
+                        <constraint firstItem="JtG-K4-8Uq" firstAttribute="leading" secondItem="e2k-af-lK4" secondAttribute="leading" constant="10" id="W8d-G9-D78"/>
+                        <constraint firstItem="JtG-K4-8Uq" firstAttribute="top" secondItem="e2k-af-lK4" secondAttribute="top" constant="50" id="hBS-32-i7L"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="empty-basket"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="7pL-bW-I8w" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="1ZN-Kg-1Hz"/>
+                <constraint firstItem="e2k-af-lK4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="75u-Vk-IjO"/>
+                <constraint firstItem="7pL-bW-I8w" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="9uT-6V-0Ix"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="7pL-bW-I8w" secondAttribute="bottom" id="M9K-mx-hSl"/>
+                <constraint firstItem="7pL-bW-I8w" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="hBi-mH-Ktc"/>
+                <constraint firstItem="e2k-af-lK4" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="m2b-Tb-DXr"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="e2k-af-lK4" secondAttribute="trailing" id="o0U-tD-TYr"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="e2k-af-lK4" secondAttribute="bottom" id="qbD-i5-fAd"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="55.580357142857139"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
