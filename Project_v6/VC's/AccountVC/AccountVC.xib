@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AccountVC" customModule="Project_v6" customModuleProvider="target">
+            <connections>
+                <outlet property="avatarImage" destination="qmp-oE-fZF" id="oES-cl-0F7"/>
+                <outlet property="email" destination="hGI-Uh-TeE" id="mz4-dV-86y"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="yourAvatarLabel" destination="CZl-Ns-y9P" id="aJ3-nO-4B3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qmp-oE-fZF">
+                    <rect key="frame" x="10" y="44" width="394" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="Sst-ox-CAx"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGI-Uh-TeE">
+                    <rect key="frame" x="10" y="264" width="394" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mSx-o2-pf9">
+                    <rect key="frame" x="30" y="305" width="354" height="47"/>
+                    <color key="backgroundColor" red="0.27409256209999999" green="0.42021231279999999" blue="0.32176150370000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="47" id="YMy-2Y-JLK"/>
+                    </constraints>
+                    <color key="tintColor" red="0.27409256209999999" green="0.42021231279999999" blue="0.32176150370000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Log out"/>
+                    <connections>
+                        <action selector="logOutDidTap:" destination="-1" eventType="touchUpInside" id="Gk9-eG-wAv"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Avatar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZl-Ns-y9P">
+                    <rect key="frame" x="10" y="44" width="394" height="200"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5uW-Pt-RUD">
+                    <rect key="frame" x="10" y="204" width="394" height="40"/>
+                    <color key="backgroundColor" red="0.99762975173972568" green="1" blue="0.97345572583430118" alpha="0.5723561672185431" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="pnN-SF-PMe"/>
+                    </constraints>
+                    <color key="tintColor" red="0.0" green="0.1377273614" blue="0.56581439389999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Edit">
+                        <fontDescription key="titleFontDescription" name="Gilroy-Medium" family="Gilroy" pointSize="25"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="editImageDidTap:" destination="-1" eventType="touchUpInside" id="3cw-18-Gup"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="CZl-Ns-y9P" firstAttribute="leading" secondItem="qmp-oE-fZF" secondAttribute="leading" id="0yi-3B-YaA"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qmp-oE-fZF" secondAttribute="trailing" constant="10" id="1fy-IR-KcQ"/>
+                <constraint firstItem="5uW-Pt-RUD" firstAttribute="leading" secondItem="qmp-oE-fZF" secondAttribute="leading" id="5EA-7B-hzf"/>
+                <constraint firstItem="hGI-Uh-TeE" firstAttribute="top" secondItem="qmp-oE-fZF" secondAttribute="bottom" constant="20" id="FX9-zV-tQy"/>
+                <constraint firstItem="CZl-Ns-y9P" firstAttribute="top" secondItem="qmp-oE-fZF" secondAttribute="top" id="LPM-SM-FW4"/>
+                <constraint firstItem="mSx-o2-pf9" firstAttribute="top" secondItem="hGI-Uh-TeE" secondAttribute="bottom" constant="20" id="Ok2-d6-Gov"/>
+                <constraint firstItem="qmp-oE-fZF" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="QKU-xu-iJA"/>
+                <constraint firstItem="5uW-Pt-RUD" firstAttribute="trailing" secondItem="qmp-oE-fZF" secondAttribute="trailing" id="SKd-0v-F9p"/>
+                <constraint firstItem="CZl-Ns-y9P" firstAttribute="bottom" secondItem="qmp-oE-fZF" secondAttribute="bottom" id="UER-qd-zrH"/>
+                <constraint firstItem="mSx-o2-pf9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="VMe-ec-Agw"/>
+                <constraint firstItem="CZl-Ns-y9P" firstAttribute="trailing" secondItem="qmp-oE-fZF" secondAttribute="trailing" id="bzl-Ti-ECd"/>
+                <constraint firstItem="5uW-Pt-RUD" firstAttribute="bottom" secondItem="qmp-oE-fZF" secondAttribute="bottom" id="cqa-HE-FL4"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hGI-Uh-TeE" secondAttribute="trailing" constant="10" id="hLF-cB-pMt"/>
+                <constraint firstItem="hGI-Uh-TeE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="xRt-gR-Gh9"/>
+                <constraint firstItem="qmp-oE-fZF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="xiC-cg-gcs"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mSx-o2-pf9" secondAttribute="trailing" constant="30" id="yYI-2d-tYc"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="94.419642857142847"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
